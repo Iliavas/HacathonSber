@@ -42,7 +42,8 @@ flutter:
   assets:
     - assets/sampleMenMenu.png
     - assets/button.svg
-
+    - assets/Mask Group.png
+    - assets/3toch.png
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

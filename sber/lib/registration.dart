@@ -46,40 +46,40 @@ class Registration extends StatelessWidget{
 
           GestureDetector(
             onTap: (){
-                 Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ), //вставляешь имя виджета, к которому надо перейти (не забудь сделать import)
-                );
+                //  Navigator.push(
+                //   context,
+                //   MaterialPageRoute(builder: (context) => ), //вставляешь имя виджета, к которому надо перейти (не забудь сделать import)
+                // );
             },
             child: changeCont(Color(0xfff8ef1f), "Ученик"),
         ),
         zone,
         GestureDetector(
             onTap: (){
-               Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ),
-                );
+              //  Navigator.push(
+              //     context,
+              //     MaterialPageRoute(builder: (context) => ),
+              //   );
             },
             child: changeCont(Color(0xfff1f1f1), "Учитель")
         ),
         zone,
         GestureDetector(
             onTap: (){
-               Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ),
-                );
+              //  Navigator.push(
+              //     context,
+              //     MaterialPageRoute(builder: (context) => ),
+              //   );
             },
             child: changeCont(Color(0xfff8ef1f), "Художник")
         ),
         zone,
             GestureDetector(
             onTap: (){
-               Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ),
-                );
+              //  Navigator.push(
+              //     context,
+              //     MaterialPageRoute(builder: (context) => ),
+              //   );
             },
             child: changeCont(Color(0xfff1f1f1), "Эксперт")
             )
