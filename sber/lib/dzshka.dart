@@ -4,14 +4,14 @@ import 'AppBar.dart';
 import 'TaskCard.dart';
 import 'WorkTaskCard.dart';
 
-void main() {
-  runApp(
-    MaterialApp(
-      title: "TEST MENU",
-      home: MainTemplate(Works(), "Работы")
-    )
-  );
-}
+// void main() {
+//   runApp(
+//     MaterialApp(
+//       title: "TEST MENU",
+//       home: MainTemplate(Works(), "Работы")
+//     )
+//   );
+// }
 
 
 Container work_button = Container(width: 153, height: 34, decoration: BoxDecoration(borderRadius: BorderRadius.circular(5), color: Colors.white ), child:  SizedBox(width: 153, height: 34, child: Align(alignment:Alignment.center, child:Text("Задано", textAlign: TextAlign.center, style: TextStyle(color: Colors.black, fontSize: 14, fontFamily: "SF Pro Display", fontWeight: FontWeight.w400, ), ), ), ));
