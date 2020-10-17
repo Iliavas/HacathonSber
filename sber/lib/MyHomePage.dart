@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 class MyHomePage extends StatelessWidget {
   List tags = ['математика', 'физика', 'русский язык', 'химия'];
@@ -157,7 +159,8 @@ class MyHomePage extends StatelessWidget {
                             style: TextStyle(color: Colors.black)),
                       ),
                     );
-                  }),
+                  }
+              ),
             ),
 
             //gallery section
@@ -207,8 +210,62 @@ class MyHomePage extends StatelessWidget {
                                 ],
                               ),
                             );
-
                           }
+                      ),
+                    ),
+                    Expanded(
+                      child: Stack(alignment: Alignment.bottomCenter,
+
+                        children: <Widget>[
+                          Align(alignment: Alignment.topCenter,
+                            child: Container(
+                              padding: EdgeInsets.only(right: 25, left: 25),
+                              height: 200,
+                              child: StaggeredGridView.countBuilder(
+                                crossAxisCount: 4,
+                                itemCount: 4,
+                                itemBuilder: (BuildContext context,
+                                    int index) =>
+                                    Container(
+                                      child: ClipRRect(
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(12)),
+                                        child: Image.asset(
+                                            'assets/img${index + 1}.jpg',
+                                            fit: BoxFit.cover),
+                                      ),
+                                    ),
+
+                                staggeredTileBuilder: (int index) =>
+                                    StaggeredTile.count(
+                                        2, index.isEven ? 3 : 1),
+                                mainAxisSpacing: 9,
+                                crossAxisSpacing: 8,
+                              ),
+                            ),
+                          ),
+                          Container(
+                            width: double.infinity,
+                            padding: EdgeInsets.only(right: 12, left: 12),
+                            decoration: BoxDecoration(
+                              color: Colors.black,
+                              borderRadius: BorderRadius.vertical(
+                                top: Radius.circular(33),
+                              ),
+                            ),
+                            height: 55,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                Icon(Icons.home, color: Colors.white),
+                                Icon(Icons.notifications_active,
+                                    color: Colors.white),
+                                Icon(Icons.favorite, color: Colors.white),
+                                Icon(Icons.person, color: Colors.white),
+                              ],
+                            ),
+                          )
+                        ],
                       ),
                     )
                   ],
@@ -216,6 +273,7 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
           ],
-        ));
+        )
+      );
   }
 }
