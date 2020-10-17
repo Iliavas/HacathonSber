@@ -13,6 +13,9 @@ import "AppBar.dart";
 //   );
 // }
 class MyDrawer extends StatelessWidget{
+
+  
+
   @override
   Widget build(BuildContext context){
   return Drawer(
@@ -98,7 +101,37 @@ class MyDrawer extends StatelessWidget{
         Container(width: 225, height: 1, color: Color(0xfff3f3f3), ),], ),
                 ),
               Container(height: 261),
-              Row(
+              GestureDetector(
+                onTap:() {
+                  showDialog<void>(
+    context: context,
+    barrierDismissible: false, // user must tap button!
+    builder: (BuildContext context) {
+      return AlertDialog(
+        title: Text('К сожалению тех поддержки пока нет :('),
+        content: SingleChildScrollView(
+          child: ListBody(
+            children: <Widget>[
+              Text('Подождите год или два и все появится'),
+              Text('Честно, дайте денег и все будет'),
+            ],
+          ),
+        ),
+        actions: <Widget>[
+          TextButton(
+            child: Text('Дать денег(нет)'),
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+          ),
+        ],
+      );
+    },
+  );
+                },
+
+                child:Column(
+                children:[Row(
                 children: [
                   Container(width:29,),
                   SizedBox(width: 125, child: Text("Нужна помощь?", style: TextStyle(fontSize: 14, fontFamily: "SF Pro Display", fontWeight: FontWeight.w500, ), ), ),
@@ -108,6 +141,8 @@ class MyDrawer extends StatelessWidget{
                   Container(width:29,),
                   SizedBox(width: 125, child: Text("тех.поддержка", style: TextStyle(color:Colors.black26 ,fontSize: 14, fontFamily: "SF Pro Display", fontWeight: FontWeight.w500, ), ), ),
                 ]),
+                ])
+              )
             ],
             )
   
