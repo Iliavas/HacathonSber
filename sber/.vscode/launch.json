@@ -6,6 +6,7 @@
   "configurations": [
     {
       "name": "sber",
+      "cwd": "HacathonSber/sber",
       "request": "launch",
       "type": "dart"
     }
