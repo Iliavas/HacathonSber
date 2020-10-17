@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class MyHomePage extends StatelessWidget {
   List tags = ['математика', 'физика', 'русский язык', 'химия'];
   List categories = ['Дизайн', 'Программирование', 'Обработка', 'Игры'];
