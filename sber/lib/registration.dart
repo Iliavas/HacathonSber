@@ -37,7 +37,7 @@ class Registration extends StatelessWidget{
         );
     }
 
-    return Center(
+    return Scaffold(body:Center(
       child:Column(
         mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -85,6 +85,7 @@ class Registration extends StatelessWidget{
             )
         
       ],
+    )
     )
     );
   }
