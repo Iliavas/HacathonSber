@@ -2,14 +2,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import "AppBar.dart";
 
-void main() {
-  runApp(
-    MaterialApp(
-      title: "TEST MENU",
-      home: MainTemplate(Container(), Container(child: Text("Домашняя работа"),))
-    )
-  );
-}
+// void main() {
+//   runApp(
+//     MaterialApp(
+//       title: "TEST MENU",
+//       home: MainTemplate(Container(), "Домашняя работа")
+//     )
+//   );
+// }
 Drawer myDrawer = Drawer(
   child:ListView(
           children: [
