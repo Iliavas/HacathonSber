@@ -1,14 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import "AppBar.dart";
 
 void main() {
   runApp(
     MaterialApp(
       title: "TEST MENU",
-      home: Scaffold(
-        appBar: AppBar(title: Text("TEST MENU")),
-        drawer: myDrawer,
-        ),
+      home: MainTemplate(Container(), Container(child: Text("Домашняя работа"),))
     )
   );
 }
