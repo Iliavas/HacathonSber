@@ -11,13 +11,18 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
-          leading: Icon(Icons.arrow_back_ios),
+          leading: Icon(Icons.arrow_back_ios, color: Colors.black),
           elevation: 0,
-          backgroundColor: Colors.black,
+          backgroundColor: Colors.greenAccent,
           actions: <Widget>[
             Padding(
+              padding: const EdgeInsets.only(right: 47.0, bottom: 7),
+              child: Image.asset('assets/SberLogo.png'),
+            ),
+
+            Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Icon(Icons.more_vert),
+              child: Icon(Icons.more_vert,color: Colors.black,),
             )
           ],
         ),
@@ -169,7 +174,7 @@ class MyHomePage extends StatelessWidget {
                 width: double.infinity,
                 margin: EdgeInsets.only(top: 15),
                 decoration: BoxDecoration(
-                    color: Colors.black,
+                    color: Colors.green,
                     borderRadius:
                     BorderRadius.vertical(top: Radius.circular(34))),
                 child: Column(
@@ -248,7 +253,7 @@ class MyHomePage extends StatelessWidget {
                             width: double.infinity,
                             padding: EdgeInsets.only(right: 12, left: 12),
                             decoration: BoxDecoration(
-                              color: Colors.black,
+                              color: Colors.greenAccent,
                               borderRadius: BorderRadius.vertical(
                                 top: Radius.circular(33),
                               ),
