@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'AppBar.dart';
 
 //сделай import виджетов, к которым должно все переходить
 
@@ -37,7 +38,7 @@ class Registration extends StatelessWidget{
         );
     }
 
-    return Center(
+    return Scaffold(body:Center(
       child:Column(
         mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -46,10 +47,10 @@ class Registration extends StatelessWidget{
 
           GestureDetector(
             onTap: (){
-                //  Navigator.push(
-                //   context,
-                //   MaterialPageRoute(builder: (context) => ), //вставляешь имя виджета, к которому надо перейти (не забудь сделать import)
-                // );
+                 Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MainTemplate(Container(), "Курсы")), //вставляешь имя виджета, к которому надо перейти (не забудь сделать import)
+                );
             },
             child: changeCont(Color(0xfff8ef1f), "Ученик"),
         ),
@@ -85,6 +86,7 @@ class Registration extends StatelessWidget{
             )
         
       ],
+    )
     )
     );
   }

@@ -13,7 +13,7 @@ class MainTemplate extends StatelessWidget {
   @override
   Widget build (BuildContext ctx) {
     return Scaffold(
-      drawer: myDrawer,
+      drawer: MyDrawer(),
       appBar: AppBar(
                 backgroundColor: Colors.white,
           leading: Padding(
